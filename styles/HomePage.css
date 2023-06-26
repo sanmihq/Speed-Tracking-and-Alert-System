@@ -1,0 +1,99 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.speedometer {
+  position: relative;
+  width: 400px;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  background-color: rgb(21, 116, 148);
+}
+
+.big-needles {
+  --size: 2px;
+  --offset: 160px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: var(--size);
+  height: 25px;
+  transform-origin: center bottom;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  transform: translate(calc(cos(var(--degrees)) * var(--offset)), calc(sin(var(--degrees)) * var(--offset)));
+}
+
+.big-needles:nth-of-type(1) {
+  --degrees: 1 * 360deg / 15;
+}
+
+.big-needles:nth-of-type(2) {
+  --degrees: 2 * 360deg / 15;
+}
+
+.big-needles:nth-of-type(3) {
+  --degrees: 3 * 360deg / 15;
+}
+
+.big-needles:nth-of-type(4) {
+  --degrees: 4 * 360deg / 15;
+}
+
+.big-needles:nth-of-type(5) {
+  --degrees: 5 * 360deg / 15;
+}
+
+.big-needles:nth-of-type(6) {
+  --degrees: 6 * 360deg / 15;
+}
+
+.big-needles:nth-of-type(7) {
+  --degrees: 7 * 360deg / 15;
+}
+
+.big-needles:nth-of-type(8) {
+  --degrees: 8 * 360deg / 15;
+}
+
+.big-needles:nth-of-type(9) {
+  --degrees: 9 * 360deg / 15;
+}
+
+.big-needles:nth-of-type(10) {
+  --degrees: 10 * 360deg / 15;
+}
+
+.big-needles:nth-of-type(11) {
+  --degrees: 11 * 360deg / 15;
+}
+
+.big-needles:nth-of-type(12) {
+  --degrees: 12 * 360deg / 15;
+}
+
+.big-needles:nth-of-type(13) {
+  --degrees: 13 * 360deg / 15;
+}
+
+.big-needles:nth-of-type(14) {
+  --degrees: 14 * 360deg / 15;
+}
+
+.big-needles:nth-of-type(15) {
+  --degrees: 15 * 360deg / 15;
+}
+
+/*# sourceMappingURL=HomePage.css.map */
