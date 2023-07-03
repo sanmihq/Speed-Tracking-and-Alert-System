@@ -1,28 +1,24 @@
-// Get the current location of the driver.
-let previousLocation;
+var reqcount = 0;
 
-const calculateSpeed = (location) => {
-  if (previousLocation) {
-    const distance = Math.sqrt(
-      (previousLocation.coords.latitude - location.coords.latitude) ** 2 +
-      (previousLocation.coords.longitude - location.coords.longitude) ** 2
-    );
+navigator.geolocation.watchPosition(successCallback);
 
-    const time = location.timestamp - previousLocation.timestamp;
-    const speed = distance / time;
+function successCallback(position) {
+  const { accuracy, latitude, longitude, altitude, heading, speed } =
+    position.coords;
 
-    // Update the element with the new speed.
-    document.getElementById("speed").innerHTML = speed.toFixed(2);
+  document.getElementById("details").innerHTML =
+    "Accuracy: " + accuracy + "<br>";
+  document.getElementById("details").innerHTML +=
+    "Latitude: " + latitude + " | Longitude: " + longitude + "<br>";
+  document.getElementById("details").innerHTML +=
+    "Altitude: " + altitude + "<br>";
+  document.getElementById("details").innerHTML +=
+    "Heading: " + heading + "<br>";
+
+  if (speed !== null) {
+    document.getElementById("details").innerHTML += "Speed: " + speed + "<br>";
+  } else {
+    document.getElementById("details").innerHTML +=
+      "Speed information is not available.<br>";
   }
-
-  // Update the previous location with the current location.
-  previousLocation = location;
-};
-
-// Set up a watch to continuously monitor the position.
-const watchId = navigator.geolocation.watchPosition(calculateSpeed);
-
-// Stop the watch after a certain duration (e.g., 10 minutes).
-setTimeout(() => {
-  navigator.geolocation.clearWatch(watchId);
-}, 10 * 60 * 1000); // Stop after 10 minutes (adjust as needed)
+}
