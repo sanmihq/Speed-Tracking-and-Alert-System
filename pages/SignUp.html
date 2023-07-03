@@ -11,7 +11,7 @@
     <link rel="manifest" href="/site.webmanifest" />
 
     <link rel="stylesheet" href="../styles/EmailSignIn.css" />
-    <script defer src="../scripts/SignUp.js"></script>
+    <script type="module" defer src="../scripts/SignUp.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -84,7 +84,11 @@
             </div>
           </div>
           <div class="sign-in">
-            <input type="submit" value="Sign Up" id="sign-up" onclick="navigateTo('HomePage.html')"/>
+            <input
+              type="submit"
+              value="Sign Up"
+              id="sign-up"
+            />
           </div>
           <span class="sign-up account"
             >Already have an account?

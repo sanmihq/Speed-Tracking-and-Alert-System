@@ -3,62 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BSTAS</title>
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="../styles/HomePage.css">
+    <script src="../scripts/HomePage.js"></script>
 
-    <link rel="stylesheet" href="../styles/HomePage.css" />
-    <script defer src="../scripts/HomePage.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lexend&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   </head>
-
   <body>
     <div class="container">
-      <div class="speedometer-container">
-        <div class="speedometer-text">
-          <div class="dynamic">
-            <span class="km">0</span>
-            <span class="unit">KMH</span>
-          </div>
-        </div>
-        <div class="center-point"></div>
-        <div class="speedometer-center-hide"></div>
-        <div class="speedometer-bottom-hide"></div>
-        <div class="arrow-container">
-          <div class="arrow-wrapper speed-0" id="arrowWrapper">
-            <div class="arrow"></div>
-          </div>
-        </div>
-        <div class="speedometer-scale scale-1"></div>
-        <div class="speedometer-scale scale-2"></div>
-        <div class="speedometer-scale scale-3"></div>
-        <div class="speedometer-scale scale-4"></div>
-        <div class="speedometer-scale scale-5"></div>
-        <div class="speedometer-scale scale-6"></div>
-        <div class="speedometer-scale scale-7"></div>
-        <div class="speedometer-scale scale-8"></div>
-        <div class="speedometer-scale scale-9"></div>
-        <div class="speedometer-scale scale-10"></div>
-        <div class="speedometer-scale scale-11"></div>
-        <div class="speedometer-scale scale-12"></div>
-        <div class="speedometer-scale scale-13"></div>
-        <div class="speedometer-scale scale-14"></div>
-        <div class="speedometer-scale scale-15"></div>
-
-        <div class="label label-0">0</div>
-        <div class="label label-20">20</div>
-        <div class="label label-40">40</div>
-        <div class="label label-60">60</div>
-        <div class="label label-80">80</div>
-        <div class="label label-100">100</div>
-        <div class="label label-120">120</div>
-        <div class="label label-140">140</div>
-      </div>
-
-      <button id="startButton">Start</button>
-    </div>
+        <h1>Real-time Speed</h1>
+        <p>Current Speed: <br><span id="speed">0</span>
+    </div></p>
   </body>
 </html>
