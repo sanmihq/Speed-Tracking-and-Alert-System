@@ -5,15 +5,46 @@
 }
 
 body {
-  height: 100vh;
   display: grid;
   place-items: center;
+  height: 100vh;
   text-align: center;
   font-family: 'Poppins', sans-serif;
 }
 
-#speed {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  font-size: 3rem;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+.speed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.value {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 0.6;
+}
+
+.unit {
+  margin-top: 1em;
+}
+
+.warning {
+  color: red;
+  background-color: rgb(255, 225, 92);
+  padding: 0.5em 1em;
+  border-radius: 50px;
+  display: none;
 }
