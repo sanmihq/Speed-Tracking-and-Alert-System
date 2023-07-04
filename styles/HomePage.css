@@ -48,3 +48,17 @@ h1 {
   border-radius: 50px;
   display: none;
 }
+
+.notification {
+  font-family: 'Poppins', sans-serif;
+  padding: 1em;
+  background-color: black;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.notification:hover {
+  background-color: rgba(0, 0, 0, 0.815);
+}
