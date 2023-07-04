@@ -4,24 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    
-    <link rel="stylesheet" href="../styles/HomePage.css">
+
+    <link rel="stylesheet" href="../styles/HomePage.css" />
     <script defer src="../scripts/HomePage.js"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
       <h1>Speedometer</h1>
       <div class="speed">
-        <span class="value" id="value">0.00
-        </span>
+        <span class="value" id="value">0.00 </span>
         <span class="unit">KM/H</span>
       </div>
-      <p class="warning">Warning: You are exceeding the speed limit. ⚠️</p>
-      <button onclick="requestNotificationPermission()" class="notification">Enable Notifications</button>
+      <button onclick="requestNotificationPermission()" class="notification">
+        Enable Notifications
+      </button>
+      <div class="toast warning-toast">
+        <img src="../assets/images/warning.png" alt="Warning Icon" class="toast-image" />
+        <p class="toast-message">Warning: You are exceeding the speed limit.</p>
+        <button class="toast-close-button" onclick="closeToast()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275q-.275-.275-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l4.9 4.9l4.9-4.9q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275L12 13.4Z"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
   </body>
 </html>

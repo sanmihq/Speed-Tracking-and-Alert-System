@@ -28,20 +28,30 @@ function successCallback(position) {
 
     // Check if speed exceeds 30 km/h
     if (speedInKilometersPerHour > 30) {
-      document.querySelector(".warning").style.display = "block";
+      document.querySelector(".toast").style.display = "flex";
 
       // Check if browser supports notifications and user has granted permission
       if ("Notification" in window && Notification.permission === "granted") {
         new Notification("Speed Limit Exceeded", {
           body: "You are driving above the speed limit of 30 km/h.",
-          icon: "notification-icon.png",
+          icon: "../assets/warning.png",
         });
       }
+
+      // Display popup alert
+      alert(
+        "Speed Limit Exceeded: You are driving above the speed limit of 30 km/h."
+      );
     } else {
-      document.querySelector(".warning").style.display = "none";
+      document.querySelector(".toast").style.display = "none";
     }
   } else {
     document.getElementById("value").textContent = "N/A";
-    document.querySelector(".warning").style.display = "none";
+    document.querySelector(".toast").style.display = "none";
   }
+}
+
+function closeToast() {
+  var toast = document.querySelector(".toast");
+  toast.style.display = "none";
 }

@@ -18,6 +18,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 2em;
+  margin-inline: 2em;
 }
 
 h1 {
@@ -41,14 +42,6 @@ h1 {
   margin-top: 1em;
 }
 
-.warning {
-  color: red;
-  background-color: rgb(255, 225, 92);
-  padding: 0.5em 1em;
-  border-radius: 50px;
-  display: none;
-}
-
 .notification {
   font-family: 'Poppins', sans-serif;
   padding: 1em;
@@ -61,4 +54,43 @@ h1 {
 
 .notification:hover {
   background-color: rgba(0, 0, 0, 0.815);
+}
+
+.toast {
+  display: none;
+  align-items: center;
+  padding: 10px;
+  border-radius: 4px;
+  color: #000;
+  z-index: 9999;
+}
+
+.warning-toast {
+  background-color: #ff9800;
+  border-radius: 10px;
+}
+
+.toast-image {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.toast-message {
+  margin-right: 10px;
+  font-size: 0.9rem;
+}
+
+.toast-close-button {
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0.3em;
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+
+.toast-close-button:hover {
+  background-color: rgba(0, 0, 0, 0.226);
 }
