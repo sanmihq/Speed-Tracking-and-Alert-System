@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>BSTAS | Speedometer</title>
+
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="../styles/HomePage.css" />
     <script defer src="../scripts/HomePage.js"></script>
@@ -14,6 +16,9 @@
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
   </head>
   <body>
     <div class="container">
@@ -26,7 +31,11 @@
         Enable Notifications
       </button>
       <div class="toast warning-toast">
-        <img src="../assets/images/warning.png" alt="Warning Icon" class="toast-image" />
+        <img
+          src="../assets/images/warning.png"
+          alt="Warning Icon"
+          class="toast-image"
+        />
         <p class="toast-message">Warning: You are exceeding the speed limit.</p>
         <button class="toast-close-button" onclick="closeToast()">
           <svg

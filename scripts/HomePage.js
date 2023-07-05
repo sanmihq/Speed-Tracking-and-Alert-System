@@ -1,3 +1,27 @@
+const firebaseConfig = {
+  apiKey: "*******",
+
+  authDomain: "*******",
+
+  databaseURL: "********",
+
+  projectId: "*******",
+
+  storageBucket: "********",
+
+  messagingSenderId: "******",
+
+  appId: "*******",
+
+  measurementId: "******",
+};
+
+// initialze firebase
+firebase.initializeApp(firebaseConfig);
+
+// reference database
+var overspeedingReportDB = firebase.database().ref("project name");
+
 function requestNotificationPermission() {
   if ("Notification" in window) {
     Notification.requestPermission()
@@ -42,6 +66,26 @@ function successCallback(position) {
       alert(
         "Speed Limit Exceeded: You are driving above the speed limit of 30 km/h."
       );
+
+      // Get the stored details from local storage
+      const storedDetails = localStorage.getItem("details");
+
+      // Check if the stored details exist and are not empty
+      if (storedDetails) {
+        const details = JSON.parse(storedDetails);
+
+        // Add the current date and time to the details object
+        details.datetime = new Date().toISOString();
+
+        // Push the details to Firebase Realtime Database
+        overspeedingReportDB.push(details, (error) => {
+          if (error) {
+            console.error("Error pushing data to Firebase:", error);
+          } else {
+            console.log("Data pushed to Firebase successfully.");
+          }
+        });
+      }
     } else {
       document.querySelector(".toast").style.display = "none";
     }

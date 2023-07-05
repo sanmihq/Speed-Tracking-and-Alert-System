@@ -50,7 +50,7 @@ h1 {
   max-width: 500px;
 }
 
-.buttons {
+.button {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
@@ -63,7 +63,7 @@ button {
   padding: 1em 0;
   background-color: var(--slate-900);
   color: var(--slate-100);
-  border: none;
+  border: 1px solid transparent;
   border-radius: 10px;
   cursor: pointer;
 
@@ -71,7 +71,9 @@ button {
 }
 
 button:hover {
-  background-color: var(--slate-800);
+  color: var(--slate-900);
+  background-color: var(--slate-100);
+  border-color: var(--slate-900);
 }
 
 .policy {
