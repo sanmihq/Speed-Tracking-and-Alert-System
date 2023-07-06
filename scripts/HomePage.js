@@ -1,26 +1,26 @@
 const firebaseConfig = {
-  apiKey: "*******",
+  apiKey: "AIzaSyBY-2F1aI_-jgamYBSo8uvMJT_1FF__8ks",
 
-  authDomain: "*******",
+  authDomain: "speedometer-database.firebaseapp.com",
 
-  databaseURL: "********",
+  databaseURL: "https://speedometer-database-default-rtdb.firebaseio.com",
 
-  projectId: "*******",
+  projectId: "speedometer-database",
 
-  storageBucket: "********",
+  storageBucket: "speedometer-database.appspot.com",
 
-  messagingSenderId: "******",
+  messagingSenderId: "879680607334",
 
-  appId: "*******",
+  appId: "1:879680607334:web:dfbfc457951a3fbf3449a7",
 
-  measurementId: "******",
+  measurementId: "G-ZBM97T9WYD",
 };
 
 // initialze firebase
 firebase.initializeApp(firebaseConfig);
 
 // reference database
-var overspeedingReportDB = firebase.database().ref("project name");
+var overspeedingReportDB = firebase.database().ref("overspeeding-report");
 
 function requestNotificationPermission() {
   if ("Notification" in window) {
