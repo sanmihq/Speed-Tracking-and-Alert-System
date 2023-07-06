@@ -26,7 +26,7 @@ If any form fields are left unfilled, an alert message is displayed, prompting t
 
 The speedometer component is located on this page, along with an "Enable Notification" button below it. When the page is loaded, it requests location access using the **Geolocation API**.
 
-```
+```javascript
 function requestNotificationPermission() {
   if ("Notification" in window) {
     Notification.requestPermission()
@@ -51,7 +51,7 @@ Users can click the "Enable Notification" button, implemented with the **Notific
 
 The speedometer component utilizes the **Geolocation API** provided by the **W3C**. This API allows for one-time and real-time geographical calculations. The ***watchPosition*** function is implemented to obtain real-time data, and the ***speed*** object is used to retrieve the current speed.
 
-``` 
+```javascript
 navigator.geolocation.watchPosition(successCallback);
 
 function successCallback(position) {
@@ -69,7 +69,7 @@ Within the if-else statement, another ***if-else*** statement checks if the spee
 - A push notification, enabled by clicking the "Enable Notification" button earlier, is sent to the driver's device as a warning.
 - Additionally, a function is invoked to retrieve the driver's details from the JSON file stored in the local storage, which were provided when the form was filled. The data, along with a timestamp indicating the date and time of the overspeeding incident (obtained using the new Date object and converted to ISO format), is pushed to a real-time Firebase database.
 
-```
+``` javascript
   const storedDetails = localStorage.getItem("details");
 
       // Check if the stored details exist and are not empty
